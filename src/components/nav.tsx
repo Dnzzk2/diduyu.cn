@@ -24,7 +24,7 @@ const Nav: Component = () => {
       <div class="container mx-auto px-4">
         <div class="flex items-center  justify-between sm:justify-around h-16">
           <div class="flex items-center">
-            <img src="../assets/logoX3.png" alt="logo" width={40} height={40} />
+            <img src="/src/assets/logoX3.png" alt="logo" width={40} height={40} />
             <span class="logo title text-3xl px-1">Du</span>
           </div>
           <div class="text-custom-2 whitespace-nowrap font-alimama  text-2xl  hidden sm:flex">
