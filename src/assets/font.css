@@ -1,8 +1,7 @@
 /* Alimm 阿里妈妈刀隶体 */
 @font-face {
-  font-family: 'Alimm';
+  font-family: 'alimm';
   font-style: normal;
   font-weight: 400;
-  src: local(''), url('./阿里妈妈刀隶体.ttf') format('truetype'),
-    url('./阿里妈妈刀隶体.woff') format('woff');
+  src: local(''), url('./AlimamaDaoLiTi.woff2') format('woff2');
 }

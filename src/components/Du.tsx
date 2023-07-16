@@ -6,7 +6,7 @@ const Du: Component = () => {
     <div class="pt-24 px-6 text-left text-xl max-w-[76ch] mx-auto relative mb-4 " id="Du">
       <div class="bird"></div>
       <h1 class="text-4xl font-bold">
-        <span class="block title">Hola!</span>
+        <span class="block title">Bonjour!</span>
         <span class="block mt-2 title">I'm Dnzzk2.</span>
       </h1>
       <div class="text-lg sm:text-xl mt-6 title">
