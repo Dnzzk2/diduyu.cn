@@ -44,7 +44,7 @@ export default () => {
       <h1 class="text-4xl mb-4 mt-4">
         <span class="title-tp">致谢</span>
       </h1>
-      <div class="title">感谢@h7ml、@Diu</div>
+      <div class="title text-base sm:text-xl">感谢@h7ml、@Diu</div>
     </div>
   );
 };
