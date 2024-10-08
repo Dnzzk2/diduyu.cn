@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@egoist/tailwindcss-icons": "^1.1.0",
-    "solid-js": "^1.7.6"
+    "solid-js": "^1.7.6",
+    "three": "^0.169.0"
   }
 }
