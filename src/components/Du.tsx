@@ -4,7 +4,7 @@ import Socialize from "./Socialize";
 const Du: Component = () => {
   return (
     <div
-      class="pt-24 px-6 text-left text-xl max-w-[76ch] mx-auto relative mb-4 "
+      class="pt-24 px-6 text-left text-xl max-w-[76ch] mx-auto relative"
       id="Du"
     >
       <div class="bird"></div>

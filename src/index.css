@@ -87,6 +87,17 @@
   font-family: "Alimm", sans-serif;
 }
 
+/* 太阳 */
+.sun {
+  position: absolute;
+  /* 渐变 #af6f64 to #dcd8d7 */
+  background-image: linear-gradient(to bottom, #af6f64, #dfdddd00);
+  border-radius: 50%;
+  /* 带点灰蒙蒙的质感 */
+  filter: blur(1.5px);
+  z-index: -1;
+}
+
 /* 水墨山 */
 .bgbg {
   background-image: url("./assets/bg-removebg-preview.png");
@@ -145,8 +156,14 @@
 
 /* 下跳转箭头 */
 @keyframes twinkle {
+  0% {
+    border-color: #ddeeff;
+  }
   50% {
     border-color: #6688aa;
+  }
+  100% {
+    border-color: #ddeeff;
   }
 }
 
@@ -165,7 +182,7 @@
   transform: rotate(135deg);
   cursor: pointer;
   transition: 0.25s;
-  animation: twinkle 2s 2s;
+  animation: twinkle 4s infinite;
 }
 
 .bottomArrow:hover {

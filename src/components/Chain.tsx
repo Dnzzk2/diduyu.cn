@@ -34,7 +34,7 @@ export default () => {
 
   return (
     <div
-      class="px-6 mt-14 text-left text-xl pt-16 sm:pt-0  max-w-[76ch] mx-auto mb-4 "
+      class="px-6 mt-14 text-left text-xl max-w-[76ch] mx-auto mb-4 "
       id="Chain"
     >
       <h1 class="text-4xl mb-4">
