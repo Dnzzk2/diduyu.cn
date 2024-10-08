@@ -8,8 +8,8 @@ import Footer from "./components/Footer";
 
 const App: Component = () => {
   return (
-    <main class="mx-auto pb-[8vh]">
-      <Nav />
+    <main class="mx-auto pb-[8vh] snap-y snap-mandatory">
+      {/* <Nav /> */}
       <Header />
       <Du />
       <Opus />

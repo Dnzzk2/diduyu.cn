@@ -1,14 +1,14 @@
-import { Component, Index } from 'solid-js'
+import { Component, Index } from "solid-js";
 
 interface ChainItemProps {
   data: {
-    name: string
-    link: string
-  }
+    name: string;
+    link: string;
+  };
 }
 
 const ChainItem: Component<ChainItemProps> = (props) => {
-  const { data } = props
+  const { data } = props;
   return (
     <a
       href={data.link}
@@ -17,31 +17,34 @@ const ChainItem: Component<ChainItemProps> = (props) => {
     >
       <div class="title text-base sm:text-xl">{data.name}</div>
     </a>
-  )
-}
+  );
+};
 
 export default () => {
   const chainLists = [
     {
-      name: '@h7ml - 每一个不曾起舞的日子,都是对生命的辜负!',
-      link: 'https://www.h7ml.cn/'
+      name: "@h7ml - 每一个不曾起舞的日子,都是对生命的辜负!",
+      link: "https://www.h7ml.cn/",
     },
     {
-      name: '@Diu',
-      link: 'https://ddiu.io/'
-    }
-  ]
+      name: "@Diu",
+      link: "https://ddiu.io/",
+    },
+  ];
 
   return (
-    <div class="px-6 mt-14 text-left text-xl pt-16 sm:pt-0  max-w-[76ch] mx-auto mb-4 " id="Chain">
+    <div
+      class="px-6 mt-14 text-left text-xl pt-16 sm:pt-0  max-w-[76ch] mx-auto mb-4 "
+      id="Chain"
+    >
       <h1 class="text-4xl mb-4">
-        <span class="title">友链</span>
+        <span class="title-tp">友链</span>
       </h1>
       <Index each={chainLists}>{(item) => <ChainItem data={item()} />}</Index>
       <h1 class="text-4xl mb-4 mt-4">
-        <span class="title">致谢</span>
+        <span class="title-tp">致谢</span>
       </h1>
-      <div class="title">感谢h7ml大佬的帮助! / Diu大佬的开源!</div>
+      <div class="title">感谢@h7ml、@Diu</div>
     </div>
-  )
-}
+  );
+};

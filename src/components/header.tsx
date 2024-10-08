@@ -1,36 +1,36 @@
-import { createEffect, Component, createSignal } from 'solid-js'
-import scrollToSection from '../utils/utils'
+import { createEffect, Component, createSignal } from "solid-js";
+import scrollToSection from "../utils/utils";
 
 type Poem = {
-  hitokoto: string
-  from_who: string
-  from: string
-  uuid: string
-}
+  hitokoto: string;
+  from_who: string;
+  from: string;
+  uuid: string;
+};
 
 const Header: Component = () => {
-  const [poem, setPoem] = createSignal<Poem>()
+  const [poem, setPoem] = createSignal<Poem>();
 
   createEffect(() => {
-    fetch('https://v1.hitokoto.cn?c=i&encode=json')
+    fetch("https://v1.hitokoto.cn?c=i&encode=json")
       .then((response) => response.json())
       .then((data) => {
-        setPoem(data)
+        setPoem(data);
       })
-      .catch(console.error)
-  })
+      .catch(console.error);
+  });
 
   return (
     <header
       id="header"
-      class="bgbg h-screen bg-cover box-border bg-center flex justify-center items-center"
+      class="bgbg h-screen bg-cover box-border bg-center flex justify-center items-center snap-start"
     >
       <div class="w-full text-center ">
         <p class="text-3xl title md:text-5xl ">{poem()?.hitokoto}</p>
       </div>
-      <span class="bottomArrow" onClick={() => scrollToSection('#Du')}></span>
+      <span class="bottomArrow" onClick={() => scrollToSection("#Du")}></span>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

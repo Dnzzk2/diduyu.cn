@@ -35,26 +35,26 @@ export default () => {
       class: 'before:bg-gray-700',
       link: 'https://github.com/Dnzzk2'
     },
-    {
-      icon: 'i-ri-markdown-line',
-      class: 'before:bg-[#359EE6]',
-      link: ''
-    },
-    {
-      icon: 'i-ri-bilibili-fill',
-      class: 'before:bg-[#01AFFD]',
-      link: ''
-    },
-    {
-      icon: 'i-ri-openai-fill',
-      class: 'before:bg-custom-openaicolor ',
-      link: ''
-    },
-    {
-      icon: 'i-ri-heart-2-line',
-      class: 'before:bg-[#fb7299] ',
-      link: 'https://github.com/h7ml'
-    }
+    // {
+    //   icon: 'i-ri-markdown-line',
+    //   class: 'before:bg-[#359EE6]',
+    //   link: ''
+    // },
+    // {
+    //   icon: 'i-ri-bilibili-fill',
+    //   class: 'before:bg-[#01AFFD]',
+    //   link: ''
+    // },
+    // {
+    //   icon: 'i-ri-openai-fill',
+    //   class: 'before:bg-custom-openaicolor ',
+    //   link: ''
+    // },
+    // {
+    //   icon: 'i-ri-heart-2-line',
+    //   class: 'before:bg-[#fb7299] ',
+    //   link: 'https://github.com/h7ml'
+    // }
   ]
 
   return (
