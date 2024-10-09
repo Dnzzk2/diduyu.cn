@@ -70,6 +70,7 @@ const GithubContributionsGraph: Component<Props> = ({
 }) => {
   const [contributions, setContributions] = createSignal<Contribution[]>([]);
   const [isHovering, setIsHovering] = createSignal(false);
+  const [loading, setLoading] = createSignal(false);
 
   let containerRef: HTMLDivElement | undefined;
 
@@ -84,6 +85,7 @@ const GithubContributionsGraph: Component<Props> = ({
   } = cacheOptions;
 
   const fetchContributions = async () => {
+    setLoading(true);
     try {
       const response = await fetch(
         `https://github-contributions-api.jogruber.de/v4/${username}`
@@ -122,6 +124,8 @@ const GithubContributionsGraph: Component<Props> = ({
       }
     } catch (error) {
       console.error("Error fetching contributions:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -177,34 +181,42 @@ const GithubContributionsGraph: Component<Props> = ({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      {/* 箭头 */}
-      <button
-        onClick={scrollLeft}
-        class={`left-2 arrow ${isHovering() ? "opacity-100" : "opacity-0"}`}
-      >
-        <span class="i-ri-arrow-left-s-line"></span>
-      </button>
-      <button
-        onClick={scrollRight}
-        class={`right-2 arrow ${isHovering() ? "opacity-100" : "opacity-0"}`}
-      >
-        <span class="i-ri-arrow-right-s-line"></span>
-      </button>
-      {/* 贡献图本体 */}
-      <div
-        ref={containerRef}
-        id="githubGraph"
-        class="w-full grid grid-rows-[repeat(7,_1fr)] grid-flow-col gap-1 overflow-scroll scroll-smooth"
-      >
-        <For each={contributions()}>
-          {(contrib) => (
-            <div
-              class="w-3 h-3 bg-slate-200 rounded-[2px]"
-              style={{ "background-color": getColor(contrib.level) }}
-            ></div>
-          )}
-        </For>
-      </div>
+      {loading() ? (
+        <div class="flex items-center justify-center w-full h-[102px]">
+          <span class="i-ri-loader-4-line animate-spin"></span>
+        </div>
+      ) : (
+        <>
+          <button
+            onClick={scrollLeft}
+            class={`left-2 arrow ${isHovering() ? "opacity-100" : "opacity-0"}`}
+          >
+            <span class="i-ri-arrow-left-s-line"></span>
+          </button>
+          <button
+            onClick={scrollRight}
+            class={`right-2 arrow ${
+              isHovering() ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <span class="i-ri-arrow-right-s-line"></span>
+          </button>
+          <div
+            ref={containerRef}
+            id="githubGraph"
+            class="w-full grid grid-rows-[repeat(7,_1fr)] grid-flow-col gap-[3px] overflow-scroll scroll-smooth"
+          >
+            <For each={contributions()}>
+              {(contrib) => (
+                <div
+                  class="w-3 h-3 bg-slate-200 rounded-[2px]"
+                  style={{ "background-color": getColor(contrib.level) }}
+                ></div>
+              )}
+            </For>
+          </div>
+        </>
+      )}
     </div>
   );
 };

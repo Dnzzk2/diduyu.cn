@@ -6,6 +6,7 @@ import Opus from "./components/opus";
 import Chain from "./components/Chain";
 import Footer from "./components/Footer";
 import GithubGraph from "./components/GithubGraph";
+import Application from "./components/Application";
 
 const App: Component = () => {
   return (
@@ -13,6 +14,7 @@ const App: Component = () => {
       {/* <Nav /> */}
       <Header />
       <Du />
+      <Application />
       <GithubGraph />
       <Opus />
       <Chain />

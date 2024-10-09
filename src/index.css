@@ -89,6 +89,7 @@
 .title-tp {
   line-height: normal;
   font-family: "Alimm", sans-serif;
+  @apply text-2xl;
 }
 
 /* 太阳 */

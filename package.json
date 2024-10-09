@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@egoist/tailwindcss-icons": "^1.1.0",
+    "@iconify-json/skill-icons": "^1.2.0",
     "solid-js": "^1.7.6",
     "three": "^0.169.0"
   }
