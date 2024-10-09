@@ -64,6 +64,10 @@
   .nav-item-sm {
     @apply text-custom-2 py-2 px-5 font-alimama mt-2 hover:bg-[rgba(0,0,0,.05)] cursor-pointer rounded-md transition-all duration-250 z-50 text-center text-xl;
   }
+
+  .arrow {
+    @apply w-5 h-5 absolute top-1/2 flex items-center justify-center transform -translate-y-1/2 z-10 text-[var(--theme-color)] bg-white shadow-slate-500 shadow-xl transition-opacity duration-300;
+  }
 }
 
 @layer components {
@@ -268,4 +272,9 @@ body.fonts-loaded #loading-screen {
 
 body.fonts-loaded #root {
   opacity: 1;
+}
+
+/* 滚动条隐藏 */
+#githubGraph::-webkit-scrollbar {
+  height: 0px;
 }
