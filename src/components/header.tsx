@@ -20,11 +20,11 @@ const Header: Component = () => {
   return (
     <header
       id="header"
-      class="bgbg h-screen bg-cover box-border bg-center flex justify-center items-center snap-start"
+      class="bgbg h-screen bg-cover box-border bg-center flex justify-center items-center snap-start night"
     >
-      <div class="sun left-[60%] top-[26%] w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] sm:left-[23%] sm:top-[26%] md:left-[23%] md:top-[26%]"></div>
+      <div class="sun left-[60%] top-[23%] w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] sm:left-[23%] sm:top-[26%] md:left-[23%] md:top-[26%]"></div>
       <div class="w-full text-center ">
-        <p class="text-3xl title px-3 md:text-5xl sm:blur-[1px] sm:hover:blur-none ">
+        <p class="text-3xl title px-3 md:text-5xl  ">
           {poem()}
         </p>
       </div>
