@@ -1,13 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* 主题色 */
+/* 主题色定义 */
 :root {
   --theme-color: #6688aa;
 }
 
-/* 社交图标动态效果 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  @apply mx-auto pb-[8vh];
+}
+
+/* 社交图标动画效果 */
 .brands {
   overflow: hidden;
   transition: all 0.25s;
@@ -25,7 +29,7 @@
 .brands:hover::before {
   left: 0;
 }
-/* 遮罩 */
+/* 遮罩层样式 */
 .mask {
   position: fixed;
   top: 0;
@@ -60,6 +64,7 @@
   width: 200px;
 }
 
+/* 自定义组件样式 */
 @layer components {
   .nav-item-sm {
     @apply text-custom-2 py-2 px-5 font-alimama mt-2 hover:bg-[rgba(0,0,0,.05)] cursor-pointer rounded-md transition-all duration-250 z-50 text-center text-xl;
@@ -68,15 +73,13 @@
   .arrow {
     @apply w-5 h-5 absolute top-1/2 flex items-center justify-center transform -translate-y-1/2 z-10 text-[var(--theme-color)] bg-white shadow-slate-500 shadow-xl transition-opacity duration-300;
   }
-}
 
-@layer components {
   .nav-item {
     @apply navhover py-2 px-5 relative;
   }
 }
 
-/* 渐变 */
+/* 标题渐变效果 */
 .title {
   background-clip: text;
   background-image: linear-gradient(to right, #223344, #ddeeff);
@@ -92,7 +95,7 @@
   @apply text-2xl;
 }
 
-/* 太阳 */
+/* 太阳元素样式 */
 .sun {
   position: absolute;
   /* 渐变 #af6f64 to #dcd8d7 */
@@ -101,20 +104,30 @@
   /* 带点灰蒙蒙的质感 */
   filter: blur(1.5px);
   z-index: -1;
+  @apply left-[60%] top-[23%] w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] sm:left-[23%] sm:top-[26%] md:left-[23%] md:top-[26%];
 }
 
-/* 水墨山 */
-.bgbg {
+/* 头部背景图设置 */
+header {
   background-image: url("./assets/what.png");
   object-fit: contain;
+  transition: transform 1.5s, opacity 1s;
+  transform: scale(1.05);
+  opacity: 0;
+  @apply h-screen bg-cover box-border bg-center flex justify-center items-center snap-start;
 }
 
-/* logo Du */
-.logo {
-  font-family: "Alimm", sans-serif;
+.loaded {
+  transform: scale(1);
+  opacity: 1;
 }
 
-/* 飞鸟图 */
+/* 诗词样式 */
+.poem {
+  @apply px-3 md:text-5xl text-3xl;
+}
+
+/* 飞鸟图样式 */
 .bird {
   position: absolute;
   top: -20px;
@@ -132,7 +145,23 @@
   }
 }
 
-/* header中的菜单 */
+#Du {
+  @apply pt-24 px-6 text-left text-xl max-w-[76ch] mx-auto relative;
+}
+
+.description {
+  @apply text-lg sm:text-xl mt-6 title;
+}
+
+.content-box {
+  @apply px-6 mt-14 text-left text-xl max-w-[76ch] mx-auto;
+}
+
+footer {
+  @apply px-6 text-left text-xl max-w-[76ch] mx-auto;
+}
+
+/* 导航菜单悬停效果 */
 .navhover:hover {
   background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
@@ -159,7 +188,7 @@
   transform: scale(1);
 }
 
-/* 下跳转箭头 */
+/* 下跳转箭头动画 */
 @keyframes twinkle {
   0% {
     border-color: #ddeeff;
@@ -172,7 +201,7 @@
   }
 }
 
-.bottomArrow {
+.bottom-arrow {
   position: absolute;
   bottom: 40px;
   left: calc(50% - 10px);
@@ -194,7 +223,7 @@
   border-color: #6688aa;
 }
 
-/* 滚动条 */
+/* 自定义滚动条样式 */
 ::-webkit-scrollbar {
   width: 0px;
   height: 6px;
@@ -210,6 +239,7 @@
   background-color: var(--c-bg);
 }
 
+/* 加载屏幕样式 */
 #loading-screen {
   position: fixed;
   top: 0;
@@ -260,6 +290,7 @@
   }
 }
 
+/* 页面加载后的淡入效果 */
 #root {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -275,7 +306,7 @@ body.fonts-loaded #root {
   opacity: 1;
 }
 
-/* 滚动条隐藏 */
+/* GitHub贡献图表滚动条隐藏 */
 #githubGraph::-webkit-scrollbar {
   height: 0px;
 }

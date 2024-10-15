@@ -10,7 +10,7 @@ import Application from "./components/Application";
 
 const App: Component = () => {
   return (
-    <main class="mx-auto pb-[8vh] snap-y snap-mandatory">
+    <main>
       {/* <Nav /> */}
       <Header />
       <Du />

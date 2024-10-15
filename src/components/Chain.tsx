@@ -33,10 +33,7 @@ export default () => {
   ];
 
   return (
-    <div
-      class="px-6 mt-14 text-left text-xl max-w-[76ch] mx-auto mb-4 "
-      id="Chain"
-    >
+    <div class="content-box mb-4">
       <h1 class="text-4xl mb-4">
         <span class="title-tp">友链</span>
       </h1>
