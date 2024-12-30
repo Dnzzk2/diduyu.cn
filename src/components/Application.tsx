@@ -8,6 +8,11 @@ const Application: Component = () => {
       icon: "i-skill-icons-react-dark",
     },
     {
+      name: "nextjs",
+      link: "https://nextjs.org/",
+      icon: "i-skill-icons-nextjs-dark",
+    },
+    {
       name: "solidjs",
       link: "https://www.solidjs.com/",
       icon: "i-skill-icons-solidjs-dark",
@@ -24,7 +29,7 @@ const Application: Component = () => {
     },
     {
       name: "markdown",
-      link: "https://daringfireball.net/",
+      link: "https://markdown.com.cn/?ref=openi.cn",
       icon: "i-skill-icons-markdown-dark",
     },
   ];

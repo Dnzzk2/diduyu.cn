@@ -10,6 +10,13 @@ const Opus: Component = () => {
       icon: "i-fluent-emoji-flat-face-in-clouds",
       img: "https://note.dnzzk2.icu/logo.png",
     },
+    {
+      name: "PageCraft",
+      desc: "Antd后台CURD页面快速配置工具",
+      link: "https://www.diduyu.us.kg",
+      icon: "i-fluent-emoji-flat-face-in-clouds",
+      img: "https://www.diduyu.us.kg/logo/favicon-512x512.png",
+    },
   ];
   return (
     <div class="content-box">
